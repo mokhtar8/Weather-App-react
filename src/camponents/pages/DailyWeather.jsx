@@ -80,25 +80,25 @@ export default function DailyWeather() {
 
       <div
         className={`max-md:fixed max-md:z-60 max-md:top-0 max-md:left-0 max-md:h-full max-md:w-[335px] max-md:bg-[#0F284C] max-md:text-white max-md:transform max-md:transition-transform max-md:duration-300 max-md:ease-in-out
-          max-md:md:translate-x-0
+          max-md:md:translate-x-0   max-md:overflow-y-auto  
           ${
             open ? "max-md:translate-x-0" : "max-md:-translate-x-full"
           }
         `}
       >
-        <div className="max-md:w-full max-md:overflow-y-auto ">
+        <div  >
       
-            <img src="/src/assets/images/landing page img/BG.png" alt="bg" className="w-[335px] h-[209px]" />
+            <img src="/src/assets/images/landing page img/BG.png" alt="bg" className=" max-md:w-[335px]  max-md:  max-md:h-[209px]" />
 
-            <div className="  max-md:-translate-y-33 max-md:ml-5 ">
+            <div className="  max-md:fixed  max-md:top-20   max-md:ml-5 ">
                <img src="/src/assets/images/landing page img/user.png" alt="user" className="max-md:w-16 max-md:h-16" />
               <p className="max-md:text-[20px] max-md:font-bold max-md:text-[#CAF7FF] max-md:mt-1">Patrick Bacalso</p>
               <p className="max-md:text-[15px] max-md:font-normal max-md:-translate-y-1.5 max-md:text-[#CAF7FF]">CSIT238</p>
             </div>
           
 
-          <div className=" max-md:-translate-y-31">
-            <p className="max-md:pt-5 max-md:pl-5 max-md:text-[20px] max-md:font-normal max-md:-translate-y-1.5 max-md:text-[#ffffff]">Weather</p>
+          <div  >
+            <p className="max-md:pt-5 max-md:pl-5 max-md:text-[20px] max-md:font-normal  max-md:text-[#ffffff]">Weather</p>
             <div className="max-md:flex max-md:w-full max-md:h-[94px]  max-md:justify-center max-md:items-center">
               <button
                 onClick={() => setTempUnit("C")}
@@ -131,7 +131,7 @@ export default function DailyWeather() {
                   <span >Add to home screen</span>
             
               </li>
-<Link to={'/UserProfile'}>
+<Link to={'/UserProfile'} >
              <li 
           onClick={() => setActive(active === "edit" ? null : "edit")}
                 className={`max-md:items-center max-md:text-xl  max-md:font-bold max-md:flex max-md:gap-1.5 max-md:pl-5 max-md:w-[335px] max-md:h-[75px]  ${
@@ -179,7 +179,7 @@ export default function DailyWeather() {
                   active === "help"  ? "max-md:bg-[#00DFC580] max-md:text-[#CAF7FF]" : "max-md:text-[#CAF7FF]" 
                 }`}>
               
-               <img src="/src/assets/images/landing page img/question (1).png" alt="question" className="max-md:w-[30px] max-md:h-[30px]" /> <span className="max-md:ml-2">Help</span>
+               <img src="/src/assets/images/landing page img/question (1).png" alt="question" className="max-md:w-[30px] max-md:h-[29px]" /> <span className="max-md:ml-2">Help</span>
              
               </li>
             </ul>
