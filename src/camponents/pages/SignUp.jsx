@@ -82,27 +82,27 @@ export default function SignUp() {
   return (
     <form
       onSubmit={handlerPost}
-      className="bg-[#0F284C] msx-sm:w-[90px] max-sm:h-[844px] max-sm:flex max-sm:flex-col max-sm:items-center max-sm:justify-center"
+      className="bg-[#0F284C]  sm:w-full  h-[844px]  flex  flex-col  items-center  justify-center"
     >
-      <h1 className="max-sm:text-[30px] max-sm:text-[#CAF7FF] max-sm:font-bold max-sm:mb-14">
+      <h1 className=" text-[30px]  text-[#CAF7FF]  font-bold  mb-14">
         Create Account
       </h1>
 
-      <div className="max-sm:w-[284px] max-sm:h-32">
+      <div className=" w-[284px]  h-32">
         <div
-          className={`max-sm:flex max-sm:border-b-2 max-sm:p-2 ${
+          className={` flex  border-b-2  p-2 ${
             errors.UserName ? "border-red-500" : "border-[#CAF7FF]"
           }`}
         >
           <img
             src="/src/assets/images/user 2.png"
             alt="user"
-            className="max-sm:mr-2"
+            className=" mr-2"
           />
           <input
             type="text"
             placeholder="UserName"
-            className="max-sm:bg-transparent max-sm:text-xl max-sm:font-normal max-sm:text-[#CAF7FF] max-sm:placeholder-[#CAF7FF] max-sm:flex-1 max-sm:w-72 max-sm:outline-none"
+            className=" bg-transparent  text-xl  font-normal  text-[#CAF7FF]  placeholder-[#CAF7FF]  flex-1  w-72  outline-none"
             autoComplete="on"
             value={formData.UserName}
             onChange={handelChange}
@@ -114,19 +114,19 @@ export default function SignUp() {
         )}
 
         <div
-          className={`max-sm:flex max-sm:border-b-2 max-sm:mt-6 max-sm:p-2 ${
+          className={` flex  border-b-2  mt-6  p-2 ${
             errors.password ? "border-red-500" : "border-[#CAF7FF]"
           }`}
         >
           <img
             src="/src/assets/images/unlock 1.png"
             alt="unlock"
-            className="max-sm:mr-2"
+            className=" mr-2"
           />
           <input
             type="password"
             placeholder="Password"
-            className="max-sm:bg-transparent max-sm:text-xl max-sm:font-normal max-sm:text-[#CAF7FF] max-sm:placeholder-[#CAF7FF] max-sm:flex-1 max-sm:w-72 max-sm:outline-none"
+            className=" bg-transparent  text-xl  font-normal  text-[#CAF7FF]  placeholder-[#CAF7FF]  flex-1  w-72  outline-none"
             autoComplete="on"
             value={formData.password}
             onChange={handelChange}
@@ -138,19 +138,19 @@ export default function SignUp() {
         )}
 
         <div
-          className={`max-sm:flex max-sm:border-b-2 max-sm:mt-6 max-sm:p-2 ${
+          className={` flex  border-b-2  mt-6  p-2 ${
             errors.ConfirmPassword ? "border-red-500" : "border-[#CAF7FF]"
           }`}
         >
           <img
             src="/src/assets/images/unlock 1.png"
             alt="unlock"
-            className="max-sm:mr-2"
+            className=" mr-2"
           />
           <input
             type="password"
             placeholder="Confirm Password"
-            className="max-sm:bg-transparent max-sm:text-xl max-sm:font-normal max-sm:text-[#CAF7FF] max-sm:placeholder-[#CAF7FF] max-sm:flex-1 max-sm:w-72 max-sm:outline-none"
+            className=" bg-transparent  text-xl  font-normal  text-[#CAF7FF]  placeholder-[#CAF7FF]  flex-1  w-72  outline-none"
             autoComplete="on"
             value={formData.ConfirmPassword}
             onChange={handelChange}
@@ -162,41 +162,41 @@ export default function SignUp() {
         )}
       </div>
 
-      <div className="max-sm:flex max-sm:mt-44 max-sm:gap-1.5 max-sm:items-baseline max-md:flex-col">
-        <div className="max-sm:flex max-sm:gap-1.5 max-sm:items-center">
+      <div className=" flex  mt-44  gap-1.5  items-baseline  flex-col">
+        <div className=" flex  gap-1.5  items-center">
           <button
             type="button"
             onClick={() => setEnabled(!enabled)}
-            className={`max-md:flex max-md:items-center max-md:w-14 max-md:h-8 max-md:rounded-full max-md:transition-colors max-md:px-1 ${
-              enabled ? "max-md:bg-cyan-600" : "max-md:bg-[#CAF7FF]"
+            className={` flex  items-center  w-14  h-8  rounded-full  transition-colors  px-1 ${
+              enabled ? " bg-cyan-600" : " bg-[#CAF7FF]"
             }`}
           >
             <span
-              className={`max-md:w-6 max-md:h-6 max-md:rounded-full max-md:bg-[#0F284C] max-md:shadow-md max-md:transform max-md:transition-transform ${
-                enabled ? "max-md:translate-x-6" : "max-md:translate-x-0"
+              className={` w-6  h-6  rounded-full  bg-[#0F284C]  shadow-md  transform  transition-transform ${
+                enabled ? " translate-x-6" : " translate-x-0"
               }`}
             />
           </button>
           <button
             type="button"
-            className="max-sm:text-[#CAF7FF] max-sm:text-xl max-sm:font-normal"
+            className=" text-[#CAF7FF]  text-xl  font-normal"
           >
             Turn on Location
           </button>
         </div>
         <button
           type="submit"
-          className="max-sm:w-[279px] max-sm:h-12 max-sm:rounded-[20px] max-sm:mt-6 max-sm:bg-[#00DFC5] max-sm:text-xl max-sm:font-bold max-md:text-[#0F284C]"
+          className=" w-[279px]  h-12  rounded-[20px]  mt-6  bg-[#00DFC5]  text-xl  font-bold  text-[#0F284C]"
         >
           Register
         </button>
       </div>
 
-      <p className="max-sm:text-[18px] max-md:font-normal max-md:text-[#CAF7FF] max-md:mt-11">
+      <p className=" text-[18px]  font-normal  text-[#CAF7FF]  mt-11">
         or
       </p>
 
-      <div className="max-md:mt-10 max-sm:flex max-sm:gap-6 max-sm:items-center">
+      <div className=" mt-10  flex  gap-6  items-center">
         <button>
           <img src="/src/assets/images/Google.png" alt="google" />
         </button>

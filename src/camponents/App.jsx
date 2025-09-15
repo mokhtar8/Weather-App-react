@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
-import LandingPage from './pages/LandingPage';
+import Landing from './pages/LandingPage';
 import DailyWeather from './pages/DailyWeather';
 import UserProfile from './pages/UserProfile';
 
@@ -13,7 +13,7 @@ function App() {
     
       <Router>
         <Routes> 
-           <Route path='/' element={<LandingPage/>} />
+           <Route path='/' element={<Landing/>} />
                  <Route path='DailyWeather' element={<DailyWeather/>} />
                  <Route path='UserProfile' element={<UserProfile/>} />
                  <Route path='SignUp' element={<SignUp/>} />

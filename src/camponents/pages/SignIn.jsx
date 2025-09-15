@@ -59,25 +59,25 @@ export default function SignIn() {
   return (
     <form
       onSubmit={handleLogin}
-      className="bg-[#0F284C] msx-sm:w-[90px] max-sm:h-[844px] max-sm:flex max-sm:flex-col max-sm:items-center max-sm:justify-center"
+      className="bg-[#0F284C] sm:w-full h-[844px]  flex  flex-col  items-center  justify-center"
     >
       <img src="/src/assets/images/logo2.svg" alt="cloud" />
 
-      <div className="max-sm:w-[284px] max-sm:h-32">
+      <div className=" w-[284px]  h-32">
         <div
-          className={`max-sm:flex max-sm:border-b-2 max-sm:p-2 ${
+          className={` flex  border-b-2  p-2 ${
             errors.identifier ? "border-red-500" : "border-[#CAF7FF]"
           }`}
         >
           <img
             src="/src/assets/images/user 2.png"
             alt="user"
-            className="max-sm:mr-2"
+            className=" mr-2"
           />
           <input
             type="text"
             placeholder="UserName"
-            className="max-sm:bg-transparent max-sm:text-xl max-sm:font-normal max-sm:text-[#CAF7FF] max-sm:placeholder-[#CAF7FF] max-sm:flex-1 max-sm:w-72 max-sm:outline-none"
+            className=" bg-transparent  text-xl  font-normal  text-[#CAF7FF]  placeholder-[#CAF7FF]  flex-1  w-72  outline-none"
             name="identifier"
             value={formData.identifier}
             onChange={handleChange}
@@ -88,19 +88,19 @@ export default function SignIn() {
         )}
 
         <div
-          className={`max-sm:flex max-sm:border-b-2 max-sm:mt-6 max-sm:p-2 ${
+          className={` flex  border-b-2  mt-6  p-2 ${
             errors.password ? "border-red-500" : "border-[#CAF7FF]"
           }`}
         >
           <img
             src="/src/assets/images/unlock 1.png"
             alt="unlock"
-            className="max-sm:mr-2"
+            className=" mr-2"
           />
           <input
             type="password"
             placeholder="Password"
-            className="max-sm:bg-transparent max-sm:text-xl max-sm:font-normal max-sm:text-[#CAF7FF] max-sm:placeholder-[#CAF7FF] max-sm:flex-1 max-sm:w-72 max-sm:outline-none"
+            className=" bg-transparent  text-xl  font-normal  text-[#CAF7FF]  placeholder-[#CAF7FF]  flex-1  w-72  outline-none"
             name="password"
             autoComplete="on"
             value={formData.password}
@@ -112,38 +112,38 @@ export default function SignIn() {
         )}
       </div>
 
-      <div className="max-sm:flex max-sm:mt-10 max-sm:gap-1.5 max-sm:items-center max-md:flex-col">
-        <div className="max-sm:flex max-sm:mt-8 max-sm:gap-1.5 max-sm:items-center">
+      <div className=" flex  mt-10  gap-1.5  items-center  flex-col">
+        <div className=" flex  mt-8  gap-1.5  items-center">
           <input
             type="checkbox"
-            className="max-sm:accent-blue-400"
+            className=" accent-blue-400"
           />
-          <p className="max-sm:text-[#CAF7FF] max-sm:text-[16px] max-sm:font-normal">
+          <p className=" text-[#CAF7FF]  text-[16px]  font-normal">
             Remember My Password
           </p>
         </div>
         <button
           type="submit"
-          className="max-sm:w-[279px] max-sm:h-12 max-sm:rounded-[20px] max-sm:mt-14 max-sm:bg-[#00DFC5] max-sm:text-[20px] max-sm:font-bold max-md:text-[#0F284C]"
+          className=" w-[279px]  h-12  rounded-[20px]  mt-14  bg-[#00DFC5]  text-[20px]  font-bold  text-[#0F284C]"
         >
           Sign In
         </button>
       </div>
 
-      <div className="max-md:mt-10 max-sm:flex max-sm:flex-col max-sm:items-center">
+      <div className=" mt-10  flex  flex-col  items-center">
         <button
           type="button"
-          className="max-sm:text-base max-md:font-normal max-md:text-[#CAF7FF]"
+          className=" text-base  font-normal  text-[#CAF7FF]"
         >
           Forgot password?
         </button>
-        <div className="max-md:flex max-md:gap-1">
-          <p className="max-sm:text-base max-md:font-normal max-md:text-[#CAF7FF]">
+        <div className=" flex  gap-1">
+          <p className=" text-base  font-normal  text-[#CAF7FF]">
             Don’t have an account?
           </p>
      <Link to='/SignUp'>   <button
             type="button"
-            className="max-sm:text-base max-md:font-normal max-md:text-[#00DFC5]"
+            className=" text-base  font-normal  text-[#00DFC5]"
           >
             Sign Up
           </button>
