@@ -15,7 +15,7 @@ export default function UserProfile() {
             <img
               src="/src/assets/images/landing page img/share 1.png"
               alt="share"
-              className=" w-8  h-8"
+              className=" w-8  h-8 "
             />
           </div>
         </div>

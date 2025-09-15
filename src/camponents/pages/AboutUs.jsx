@@ -5,13 +5,13 @@ export default function AboutUs() {
   return (
     /* header */
     <div className="  bg-[#0F284C]  w-full  h-[844px] relative ">
-      <div className="fixed top-0 left-0 w-full z-50 flex items-center max-sm:gap-25 pl-7 h-[95px] bg-[#0F2D57]">
+      <div className="fixed top-0 left-0 w-full z-50 flex items-center  pl-7 h-[95px] bg-[#0F2D57]">
         <Link to= {"/UserProfile "}>
         
           <img
             src="/src/assets/images/landing page img/arrow 1.png"
             alt="arrow"
-            className=" w-8 h-8"
+            className=" w-8 h-8 mr-23"
           />
         </Link>
         <p className="font-bold text-2xl text-[#CAF7FF] ">About Us</p>

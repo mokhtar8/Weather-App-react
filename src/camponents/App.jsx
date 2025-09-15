@@ -5,6 +5,7 @@ import Landing from './pages/LandingPage';
 import DailyWeather from './pages/DailyWeather';
 import UserProfile from './pages/UserProfile';
 import AboutUs from './pages/AboutUs';
+import ContactUs from './pages/ContactUs';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Routes> 
            <Route path='/' element={<Landing/>} />
            <Route path='AboutUs' element={<AboutUs/>} />
+           <Route path='ContactUs' element={<ContactUs/>} />
                  <Route path='DailyWeather' element={<DailyWeather/>} />
                  <Route path='UserProfile' element={<UserProfile/>} />
                  <Route path='SignUp' element={<SignUp/>} />
