@@ -4,6 +4,7 @@ import SignUp from './pages/SignUp';
 import Landing from './pages/LandingPage';
 import DailyWeather from './pages/DailyWeather';
 import UserProfile from './pages/UserProfile';
+import AboutUs from './pages/AboutUs';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Router>
         <Routes> 
            <Route path='/' element={<Landing/>} />
+           <Route path='AboutUs' element={<AboutUs/>} />
                  <Route path='DailyWeather' element={<DailyWeather/>} />
                  <Route path='UserProfile' element={<UserProfile/>} />
                  <Route path='SignUp' element={<SignUp/>} />
