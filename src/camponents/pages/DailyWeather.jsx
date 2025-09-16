@@ -41,7 +41,7 @@ const icons = [
     outline: "/src/assets/images/landing page img/emergency-call (1) 1.png",
     alt: "Call",
     size: " w-6  h-6",
-    link: "",
+    link: "/EmergencyCantact",
   },
 ];
 
@@ -204,7 +204,7 @@ export default function DailyWeather() {
           <div className=" flex  mb-4  h-6  rounded-full  overflow-hidden  border  border-[#00DFC5]">
             <button
               onClick={() => setActiveTab("day")}
-              className={` w-[69px]  h-6  border  rounded-[50px]  border-[#00DFC5]  text-[10px]  font-normal  transition-colors  ${
+              className={` w-[69px]  rounded-[50px]   border   border-[#00DFC5]  text-[10px]  font-normal  transition-colors  ${
                 activeTab === "day" 
                   ? " bg-[#00DFC5]  text-[#0F284C]  rounded-full"
                   : "  text-[#CAF7FF]   rounded-full"
@@ -215,10 +215,10 @@ export default function DailyWeather() {
 
             <button
               onClick={() => setActiveTab("month")}
-              className={` w-[91px]  h-6  text-[10px]  font-normal  transition-colors ${
+              className={` w-[91px]    text-[10px]  font-normal  transition-colors ${
                 activeTab === "month"
                   ? " bg-[#00DFC5]  text-[#0F284C]    rounded-full"
-                  : "  text-[#CAF7FF]   rounded-full  "
+                  : "   text-[#CAF7FF]   rounded-full  "
               }`}
             >
               BY MONTH
@@ -628,7 +628,7 @@ SUN
       </div>
 
       <div className=" fixed  bottom-0  w-full  bg-[#0B1C3D]   z-50">
-        <div className=" flex  justify-between  items-center  px-6  py-3">
+        <div className=" flex  justify-between  items-baseline  px-6  py-3">
           {icons.map((icon) => {
             const isActive = location.pathname === icon.link;
             return (

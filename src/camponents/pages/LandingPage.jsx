@@ -40,7 +40,7 @@ const icons = [
     outline: "/src/assets/images/landing page img/emergency-call (1) 1.png",
     alt: "Call",
     size: " w-6  h-6",
-    link: "",
+    link: "/EmergencyCantact",
   },
 ];
 

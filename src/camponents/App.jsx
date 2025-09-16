@@ -6,6 +6,7 @@ import DailyWeather from './pages/DailyWeather';
 import UserProfile from './pages/UserProfile';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
+import EmergencyCantact from './pages/EmergencyCantact';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Router>
         <Routes> 
            <Route path='/' element={<Landing/>} />
+           <Route path='EmergencyCantact' element={<EmergencyCantact/>} />
            <Route path='AboutUs' element={<AboutUs/>} />
            <Route path='ContactUs' element={<ContactUs/>} />
                  <Route path='DailyWeather' element={<DailyWeather/>} />
