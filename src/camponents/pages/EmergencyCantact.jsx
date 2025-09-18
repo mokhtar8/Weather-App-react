@@ -8,7 +8,7 @@ const icons = [
     outline: "/src/assets/images/landing page img/homepage.png",
     alt: "Home",
     size: " w-7  h-7",
-    link: "/",
+    link: "/Landing",
   },
   {
     id: 1,
@@ -32,7 +32,7 @@ const icons = [
     outline: "/src/assets/images/landing page img/radar.png",
     alt: "Radar",
     size: " w-8  h-8",
-    link: "",
+    link: "/Rader",
   },
   {
     id: 4,
@@ -399,17 +399,16 @@ export default function EmergencyCantact() {
       {/* TIPS */}
 
       <div
-        className={`   flex-col     h-[630px]  overflow-y-auto   p-4  ${
-          activeTab === "CONTACTS" ? " hidden" : "  flex"
+        className={`   flex-col flex items-center     h-[630px]  overflow-y-auto   p-4  ${
+          activeTab === "CONTACTS" ? " hidden" : "  flex flex-col  items-center  "
         } `}
       >
         {/* Advisory */}
-
-        <p className="font-bold text-[20px] leading-[1] tracking-wide  text-[#00DFC5] ml-2 mb-3 ">
-          Advisory
-        </p>
-
+        
         <div className="flex flex-col gap-3.5">
+            <p className="font-bold text-[20px] leading-[1] tracking-wide  text-[#00DFC5] ml-2  ">
+            Advisory
+          </p>
           {/* Advisory 1 */}
           <div className=" w-[370px]  h-[112px]  rounded-[20px] shadow-md shadow-[#00000040] bg-[#0F2D57]   ">
             <div className=" flex flex-col justify-center p-4">
@@ -447,33 +446,30 @@ export default function EmergencyCantact() {
               </p>
             </div>
           </div>
-          <p className="font-normal text-sm text-[#00DFC5] ml-3 leading-[1] tracking-5p align-middle">Load more...</p>
+          <p className="font-normal text-sm text-[#00DFC5] ml-3 leading-[1] tracking-5p align-middle">
+            Load more...
+          </p>
         </div>
 
+        {/* Tips */}
 
-
-   {/* Tips */}
-
-        <p className="font-bold text-[20px] leading-[1] tracking-wide  text-[#00DFC5] ml-2 mb-3 mt-5 ">
-       Tips
-        </p>
-
-        <div className="flex flex-col gap-3.5">
-   
+        <div className="flex flex-col  gap-3.5">
+          <p className="font-bold text-[20px] leading-[1] tracking-wide  text-[#00DFC5] ml-2  mt-5 ">
+            Tips
+          </p>
           {/* Tip 1: */}
           <div className=" w-[370px]  h-[112px]  rounded-[20px] shadow-md shadow-[#00000040] bg-[#0F2D57]   ">
             <div className=" flex flex-col justify-center p-4">
               <p className=" font-bold text-15px leading-[1] tracking-5p align-middle   text-white">
-               Tip 1:
+                Tip 1:
               </p>
               <p className="  w-[300px] font-normal text-sm leading-[1]  tracking-wide text-justify pt-3.5 align-middle  text-white ">
-          Stay inside as much as possible. Your home is the safest place to be; don’t go out unless extremely necessary. 
+                Stay inside as much as possible. Your home is the safest place
+                to be; don’t go out unless extremely necessary.
               </p>
             </div>
           </div>
-        
         </div>
-
       </div>
 
       {/* footer */}

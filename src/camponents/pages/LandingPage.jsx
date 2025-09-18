@@ -8,7 +8,7 @@ const icons = [
     outline: "/src/assets/images/landing page img/homepage.png",
     alt: "Home",
     size: " w-7  h-7",
-    link: "/",
+    link: "/Landing",
   },
   {
     id: 1,
@@ -32,7 +32,7 @@ const icons = [
     outline: "/src/assets/images/landing page img/radar.png",
     alt: "Radar",
     size: " w-8  h-8",
-    link: "",
+    link: "/Rader",
   },
   {
     id: 4,

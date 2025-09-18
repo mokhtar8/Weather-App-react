@@ -7,6 +7,7 @@ import UserProfile from './pages/UserProfile';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import EmergencyCantact from './pages/EmergencyCantact';
+import Rader from './pages/Rader';
 
 
 function App() {
@@ -16,14 +17,15 @@ function App() {
     
       <Router>
         <Routes> 
-           <Route path='/' element={<Landing/>} />
+           <Route path='Landing' element={<Landing/>} />
+           <Route path='Rader' element={<Rader/>} />
            <Route path='EmergencyCantact' element={<EmergencyCantact/>} />
            <Route path='AboutUs' element={<AboutUs/>} />
            <Route path='ContactUs' element={<ContactUs/>} />
                  <Route path='DailyWeather' element={<DailyWeather/>} />
                  <Route path='UserProfile' element={<UserProfile/>} />
                  <Route path='SignUp' element={<SignUp/>} />
-                 <Route path='SignIn' element={<SignIn/>} />
+                 <Route path='/' element={<SignIn/>} />
 
        
    

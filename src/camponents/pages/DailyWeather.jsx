@@ -9,7 +9,7 @@ const icons = [
     outline: "/src/assets/images/landing page img/homepage.png",
     alt: "Home",
     size: " w-7  h-7",
-    link: "/",
+    link: "/Landing",
   },
   {
     id: 1,
@@ -33,7 +33,7 @@ const icons = [
     outline: "/src/assets/images/landing page img/radar.png",
     alt: "Radar",
     size: " w-8  h-8",
-    link: "",
+    link: "/Rader",
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ export default function DailyWeather() {
   const [activeTab, setActiveTab] = useState("day");
     const [active, setActive] = useState("");
     const [tempUnit, setTempUnit] = useState("C");
-
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className=" bg-[#0F284C]  w-full h-[844px]">
@@ -226,11 +226,12 @@ export default function DailyWeather() {
           </div>
 
           <button  
-               onClick={() => setActiveTab("history")}
-          className={`   w-[73px]  h-6 border  rounded-[50px]  border-[#00DFC5]  bg-[#0F284C]    text-[#CAF7FF]  text-[11px]  font-normal   onClick={() => setActiveTab("day")}
+               onClick={() => setIsOpen(true)}
+               
+          className={`   w-[73px]  h-6 border  rounded-[50px]  border-[#00DFC5]     text-[#CAF7FF]  text-[11px]  font-normal 
               transition-colors  ${
                 activeTab === "history" 
-                  ?  " bg-[#00DFC5]  text-[#0F284C]  rounded-full"
+                  ?  " bg-[#00DFC5]  rounded-full"
                   : "  text-[#CAF7FF]   rounded-full " 
               }`}>
             History
@@ -238,7 +239,11 @@ export default function DailyWeather() {
         </div>
       </div>
 
-         <div className=" flex   flex-col  items-center  gap-3    h-[600px]  overflow-y-auto   p-4 ">
+         <div    className={` flex   flex-col  items-center  gap-3    h-[600px]  overflow-y-auto   p-4   ${
+                activeTab === "day" 
+                  ?  " flex"
+                  : "  hidden" 
+              }`  }>
 
   <div className=" w-[355px]  h-[122px]  rounded-[10px]  bg-[#0F2D57]  flex  justify-around  items-center">
   
@@ -477,7 +482,11 @@ SUN
 
 </div> 
 
-      <div className=" flex flex-col  hidden    h-[600px]  overflow-y-auto   p-2 ">
+      <div  className={` flex flex-col      h-[600px]  overflow-y-auto   p-2      ${
+                activeTab === "month" 
+                  ?  " flex"
+                  : "  hidden" 
+              }`}>
         <div className="flex justify-between text-gray-400 text-xs mb-2">
           <span>S</span>
           <span>M</span>
@@ -626,7 +635,72 @@ SUN
           </div>
         </div>
       </div>
+{/* modal */}
+{isOpen  && (
+  <div className="fixed top-53   inset-0  bg-opacity-50 flex justify-center items-start pt-20 z-50"
+       onClick={() => setIsOpen(false)}>
 
+    <div
+      className="bg-[#0F2D57] rounded-lg border-t-2 border-[#CAF7FF] h-[500px] w-full  shadow-lg animate-slideDown"
+  onClick={(e) => e.stopPropagation()}
+      style={{ animation: 'slideDown 0.3s ease forwards' }}
+    >
+      {/* Header */}
+      <div className="flex gap-24  p-6 items-center">
+        <button
+          onClick={() => setIsOpen(false)}
+          className="text-white mr-4 text-2xl font-bold"
+          aria-label="Close modal"
+        >
+          <img src="/src/assets/images/landing page img/arrow 1.png" alt="arrow" className="w-9 h-9"/>
+        </button>
+        <h1 className="font-bold text-[20px] leading-[100%] tracking-[0.05em] text-center align-middle text-[#CAF7FF] ">History</h1>
+      </div>
+<hr className=" text-[#CAF7FFCC] w-[400px] " />
+      {/* Date */}
+      <div className="text-center mb-8">
+        <p className="text-xl font-normal my-9  leading-[100%] tracking-[0.05em] text-center align-middle text-[#CAF7FF] ">Monday 31 March</p>
+      </div>
+
+      {/* Table */}
+      <div className="space-y-6 p-6">
+<div className="w-full flex justify-end gap-4 pr-3">
+  <span className="text-[16px] font-normal leading-[100%] tracking-[0.05em] text-center align-middle text-[#CAF7FF] ">HIGH</span>
+  <span className="text-[16px] font-normal leading-[100%] tracking-[0.05em] text-center align-middle text-[#CAF7FF] ">LOW</span>
+</div>
+        {/* Row */}
+        <div className="flex justify-between px-3">
+          <span className="text-[17px] font-normal leading-[100%] tracking-[0.05em] text-center align-middle text-[#CAF7FF]">Today’s Forecast</span>
+          <div className="flex gap-8 ">
+            <span className="text-[28px] font-bold leading-[100%] tracking-[0.05em] text-center align-middle text-[#CAF7FF]">30°</span>
+            <span className=" text-[28px] font-bold leading-[100%] tracking-[0.05em] text-center align-middle text-[#CAF7FF]">27°</span>
+          </div>
+        </div>
+
+        {/* Row */}
+        <div className="flex justify-between px-3">
+          <span className="text-[17px] font-normal leading-[100%] tracking-[0.05em] text-center align-middle text-[#CAF7FF]">Normal</span>
+          <div className="flex gap-8 font-semibold text-lg md:text-xl">
+            <span className="text-[28px] font-bold leading-[100%] tracking-[0.05em] text-center align-middle text-[#CAF7FF]">32°</span>
+            <span className=" text-[28px] font-bold leading-[100%] tracking-[0.05em] text-center align-middle text-[#CAF7FF]">25°</span>
+          </div>
+        </div>
+
+        {/* Row */}
+        <div className="flex justify-between px-3">
+          <span className="text-[17px] font-normal leading-[100%] tracking-[0.05em] text-center align-middle text-[#CAF7FF]">Last Year on this Date</span>
+          <div className="flex gap-8 font-semibold text-lg md:text-xl">
+            <span className="text-[28px] font-bold leading-[100%] tracking-[0.05em] text-center align-middle text-[#CAF7FF]">32°</span>
+            <span className="text-[28px] font-bold leading-[100%] tracking-[0.05em] text-center align-middle text-[#CAF7FF]">26°</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  </div>
+)}
+ {/* menu icons  */}
       <div className=" fixed  bottom-0  w-full  bg-[#0B1C3D]   z-50">
         <div className=" flex  justify-between  items-baseline  px-6  py-3">
           {icons.map((icon) => {

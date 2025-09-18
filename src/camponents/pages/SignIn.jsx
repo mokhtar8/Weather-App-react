@@ -47,7 +47,7 @@ export default function SignIn() {
       .then((res) => {
         localStorage.setItem("token", res.data.jwt);
         localStorage.setItem("user", JSON.stringify(res.data.user));
-        navigate("/");
+        navigate("Landing");
        
       })
       .catch((err) => {
