@@ -59,7 +59,7 @@ export default function SignUp() {
           password: "",
           ConfirmPassword: "",
         });
-        navigate("/Landing");
+        navigate("/");
 
         setErrors({});
       })
