@@ -500,6 +500,7 @@ export default function WeatherApp() {
               src="/src/assets/images/landing page img/arrow 1.png"
               alt="arrow"
               className="h-8 w-8 "
+              onClick={() => setOpenAlert(false)}
             />
             <span className="font-normal text-[25px] text-[#CAF7FF] mr-24 ">
               Alert level
@@ -515,11 +516,144 @@ export default function WeatherApp() {
             </button>
           </div>
           {/* Alert level description one  */}
-          <div className="flex justify-around items-center">
-<span className="w-[124px] h-30px bg-[#2BB673] font-bold text-white text-[15px]  ">NO ALERT</span>
+          {/* action section */}
+          <div className="flex pl-8 gap-[30px] items-center mt-4.5">
+            <span className="w-[124px] h-30px bg-[#2BB673] font-bold text-white text-[15px] text-center ">
+              NO ALERT
+            </span>
+            <span className=" font-bold text-[#CAF7FF] text-[15px]">
+              No action <br /> required
+            </span>
           </div>
+          {/* Stay vigilant section */}
+          <div className="flex pl-8 gap-[14px]  items-center mt-2.5">
+            {/* number box section */}
+            <div className="flex  items-center gap-2.5 ">
+              <span className="border border-[#CAF7FF] w-[34px] h-[34px] font-normal text-[15px] text-[#CAF7FF] text-center ">
+                0
+              </span>
+              <hr className="w-8 border-2 border-[#CAF7FF] " />
+              <span className="border border-[#CAF7FF] w-[34px] h-[34px] font-normal text-[15px] text-[#CAF7FF] text-center ">
+                5
+              </span>
+              <span className=" font-normal text-[15px] text-[#CAF7FF] ">
+                ft
+              </span>
+            </div>
+            {/* Stay vigilant section */}
+            <span className="font-normal text-[10px] text-[#CAF7FF] ">
+              Stay vigilant.
+            </span>
+          </div>
+          <hr className="mt-8 border border-[#CAF7FF80] " />
 
+          {/* Storm POSSIBLE section */}
+          <div className="flex pl-8 gap-[30px] items-center mt-4.5">
+            <span className="w-[124px] h-30px bg-[#F4D400] font-bold text-white text-[15px] text-center ">
+              {" "}
+              ALERT
+            </span>
+            <span className=" font-bold text-[#CAF7FF] text-[15px]">
+              Storm surge is <br /> POSSIBLE
+            </span>
+          </div>
+          {/*Preparation section */}
+          <div className="flex pl-8 gap-[14px]  items-center mt-2.5">
+            {/* number box section */}
+            <div className="flex  items-center gap-2.5 ">
+              <span className="border border-[#CAF7FF] w-[34px] h-[34px] font-normal text-[15px] text-[#CAF7FF] text-center ">
+                5
+              </span>
+              <hr className="w-8 border-2 border-[#CAF7FF] " />
+              <span className="border border-[#CAF7FF] w-[34px] h-[34px] font-normal text-[15px] text-[#CAF7FF] text-center ">
+                10
+              </span>
+              <span className=" font-normal text-[15px] text-[#CAF7FF] ">
+                ft
+              </span>
+            </div>
+            {/* Preparation section */}
+            <span className="font-normal text-[10px] text-[#CAF7FF] ">
+              Preparation measures <br /> must be carried out. Stay <br /> away
+              from the coast.
+            </span>
+          </div>
+          <hr className="mt-8 border border-[#CAF7FF80] " />
 
+          {/* Storm EXPECTED */}
+          <div className="flex pl-8 gap-[30px] items-center mt-4.5">
+            <span className="w-[124px] h-30px bg-[#F7941E] font-bold text-white text-[15px] text-center ">
+              {" "}
+              ALARM
+            </span>
+            <span className=" font-bold text-[#CAF7FF] text-[15px]">
+              Storm surge is <br /> EXPECTED
+            </span>
+          </div>
+          {/*Conditions section */}
+          <div className="flex pl-8 gap-[14px]  items-center mt-2.5">
+            {/* number box section */}
+            <div className="flex  items-center gap-2.5 ">
+              <span className="border border-[#CAF7FF] w-[34px] h-[34px] font-normal text-[15px] text-[#CAF7FF] text-center ">
+                10
+              </span>
+              <hr className="w-8 border-2 border-[#CAF7FF] " />
+              <span className="border border-[#CAF7FF] w-[34px] h-[34px] font-normal text-[15px] text-[#CAF7FF] text-center ">
+                15
+              </span>
+              <span className=" font-normal text-[15px] text-[#CAF7FF] ">
+                ft
+              </span>
+            </div>
+            {/* Conditions section */}
+            <span className="font-normal text-[10px] text-[#CAF7FF] ">
+              Conditions could become <br />
+              life threatening. Follow <br /> evacuation guidlines.
+            </span>
+          </div>
+          <hr className="mt-8 border border-[#CAF7FF80] " />
+
+          {/* Storm CATASTROPHIC */}
+          <div className="flex pl-8 gap-[30px] items-center mt-4.5">
+            <span className="w-[124px] h-30px bg-[#EE2F2E] font-bold text-white text-[15px] text-center ">
+              {" "}
+              TAKE ACTION
+            </span>
+            <span className=" font-bold text-[#CAF7FF] text-[15px]">
+              Storm surge is <br /> CATASTROPHIC
+            </span>
+          </div>
+          {/*Evacuation section */}
+          <div className="flex pl-8 gap-[14px]  items-center mt-2.5">
+            {/* number box section */}
+            <div className="flex  items-center gap-2.5 ">
+              <span className="border border-[#CAF7FF] w-[34px] h-[34px] font-normal text-[15px] text-[#CAF7FF] text-center ">
+                15
+              </span>
+              <hr className="w-8 border-2 border-[#CAF7FF] " />
+              <span className="border border-[#CAF7FF] w-[34px] h-[34px] font-normal text-[15px] text-[#CAF7FF] text-center ">
+                20
+              </span>
+              <span className=" font-normal text-[15px] text-[#CAF7FF] ">
+                ft
+              </span>
+            </div>
+            {/* Evacuation section */}
+            <span className="font-normal text-[10px] text-[#CAF7FF] ">
+              There is a significant <br />
+              threat to life. <br /> Evacuation is a must.
+            </span>
+          </div>
+{/* Confirm & Cancel buttons */}
+          <div className=" flex items-center justify-evenly translate-y-12 ">
+            <button className="w-28 h-8 border rounded-[10px] border-[#00DFC5] font-normal text-[15px] text-[#CAF7FF] leading-[15px] tracking-[0.05em] align-middle ">
+         
+              Confirm
+            </button>
+            <button className="w-28 h-8 border rounded-[10px] border-[#00DFC5] font-normal text-[15px] text-[#CAF7FF] leading-[15px] tracking-[0.05em] align-middle ">
+          Cancel
+            </button>
+          </div>
         </div>
         {openAlert && (
           <div
