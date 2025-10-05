@@ -23,7 +23,7 @@ const icons = [
     outline: "/src/assets/images/landing page img/floods4 1.png",
     alt: "Hut",
     size: " w-12  h-12  mb-3",
-    link: "",
+    link: "/WeatherPage",
   },
   {
     id: 3,
@@ -48,14 +48,14 @@ export default function Footer (){
 
     return (
            <div className=" fixed  bottom-0  w-full  bg-[#0B1C3D]   z-50">
-        <div className=" flex  justify-between  items-baseline  px-6  py-3">
+        <div className=" flex  justify-between  items-baseline  px-6 ">
           {icons.map((icon) => {
             const isActive = location.pathname === icon.link;
             return (
               <Link
                 key={icon.id}
                 to={icon.link}
-                className={`w-12 h-12 flex items-center justify-center ${isActive}`}
+                className={`w-12 h-12 flex cursor-pointer items-center justify-center ${isActive}`}
               >
                 <img
                   src={isActive ? icon.outline : icon.src}

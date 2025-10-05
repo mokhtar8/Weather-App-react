@@ -8,6 +8,7 @@ import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import EmergencyCantact from './pages/EmergencyCantact';
 import Rader from './pages/Rader';
+import WeatherPage from './pages/GroundWaterLevel';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Router>
         <Routes> 
            <Route path='Landing' element={<Landing/>} />
+           <Route path='WeatherPage' element={<WeatherPage/>} />
            <Route path='Rader' element={<Rader/>} />
            <Route path='EmergencyCantact' element={<EmergencyCantact/>} />
            <Route path='AboutUs' element={<AboutUs/>} />
